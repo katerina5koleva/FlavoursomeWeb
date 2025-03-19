@@ -1,0 +1,391 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\views\\recipe\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:views\\recipe\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\views\\recipe\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:views\\recipe\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\viewmodels\\dashboardvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:viewmodels\\dashboardvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\viewmodels\\recipevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:viewmodels\\recipevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\views\\recipe\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:views\\recipe\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\views\\recipe\\breakfast.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:views\\recipe\\breakfast.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\repository\\reciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:repository\\reciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\views\\recipe\\lunch.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:views\\recipe\\lunch.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\views\\recipe\\dessert.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:views\\recipe\\dessert.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\views\\recipe\\dinner.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:views\\recipe\\dinner.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\helpers\\togglefavoriterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:helpers\\togglefavoriterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\claimsprincipalsextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:claimsprincipalsextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\views\\recipe\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:views\\recipe\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\viewmodels\\createrecipevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:viewmodels\\createrecipevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\viewmodels\\editrecipevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:viewmodels\\editrecipevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\viewmodels\\editingredientvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:viewmodels\\editingredientvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|c:\\users\\katik\\source\\repos\\flavoursomeweb\\viewmodels\\editstepvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BF76664-9FE0-4AE4-BB09-0841F7B84341}|FlavoursomeWeb.csproj|solutionrelative:viewmodels\\editstepvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAACjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-23T16:38:46.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ToggleFavoriteRequest.cs",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Helpers\\ToggleFavoriteRequest.cs",
+              "RelativeDocumentMoniker": "Helpers\\ToggleFavoriteRequest.cs",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Helpers\\ToggleFavoriteRequest.cs",
+              "RelativeToolTip": "Helpers\\ToggleFavoriteRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T14:33:15.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RecipeVM.cs",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\ViewModels\\RecipeVM.cs",
+              "RelativeDocumentMoniker": "ViewModels\\RecipeVM.cs",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\ViewModels\\RecipeVM.cs",
+              "RelativeToolTip": "ViewModels\\RecipeVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T13:07:35.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RecipeController.cs",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Controllers\\RecipeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RecipeController.cs",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Controllers\\RecipeController.cs",
+              "RelativeToolTip": "Controllers\\RecipeController.cs",
+              "ViewState": "AgIAAGoBAAAAAAAAAADwv3gBAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T17:44:31.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Recipe\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Recipe\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Recipe\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Recipe\\Edit.cshtml",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAEwOYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-23T01:41:05.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Recipe.cs",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Models\\Recipe.cs",
+              "RelativeDocumentMoniker": "Models\\Recipe.cs",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Models\\Recipe.cs",
+              "RelativeToolTip": "Models\\Recipe.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T21:22:43.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Recipe\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Recipe\\Index.cshtml",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Recipe\\Index.cshtml",
+              "RelativeToolTip": "Views\\Recipe\\Index.cshtml",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAvwHsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-23T01:30:22.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Controllers\\DashboardController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAYwAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T06:08:14.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CreateRecipeVM.cs",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\ViewModels\\CreateRecipeVM.cs",
+              "RelativeDocumentMoniker": "ViewModels\\CreateRecipeVM.cs",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\ViewModels\\CreateRecipeVM.cs",
+              "RelativeToolTip": "ViewModels\\CreateRecipeVM.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA1wAkAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T17:56:14.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DashboardVM.cs",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\ViewModels\\DashboardVM.cs",
+              "RelativeDocumentMoniker": "ViewModels\\DashboardVM.cs",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\ViewModels\\DashboardVM.cs",
+              "RelativeToolTip": "ViewModels\\DashboardVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T06:20:19.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ClaimsPrincipalsExtentions.cs",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\ClaimsPrincipalsExtentions.cs",
+              "RelativeDocumentMoniker": "ClaimsPrincipalsExtentions.cs",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\ClaimsPrincipalsExtentions.cs",
+              "RelativeToolTip": "ClaimsPrincipalsExtentions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAnwAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T06:11:42.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "EditRecipeVM.cs",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\ViewModels\\EditRecipeVM.cs",
+              "RelativeDocumentMoniker": "ViewModels\\EditRecipeVM.cs",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\ViewModels\\EditRecipeVM.cs",
+              "RelativeToolTip": "ViewModels\\EditRecipeVM.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAswCYAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T01:44:23.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Dessert.cshtml",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Recipe\\Dessert.cshtml",
+              "RelativeDocumentMoniker": "Views\\Recipe\\Dessert.cshtml",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Recipe\\Dessert.cshtml",
+              "RelativeToolTip": "Views\\Recipe\\Dessert.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAwBAAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-23T02:21:50.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RecipeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Repository\\RecipeRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\RecipeRepository.cs",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Repository\\RecipeRepository.cs",
+              "RelativeToolTip": "Repository\\RecipeRepository.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAiwCUAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T00:19:09.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "EditIngredientVM.cs",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\ViewModels\\EditIngredientVM.cs",
+              "RelativeDocumentMoniker": "ViewModels\\EditIngredientVM.cs",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\ViewModels\\EditIngredientVM.cs",
+              "RelativeToolTip": "ViewModels\\EditIngredientVM.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAQwAcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T02:50:31.825Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Recipe\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Recipe\\Create.cshtml",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Recipe\\Create.cshtml",
+              "RelativeToolTip": "Views\\Recipe\\Create.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-22T21:44:50.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "EditStepVM.cs",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\ViewModels\\EditStepVM.cs",
+              "RelativeDocumentMoniker": "ViewModels\\EditStepVM.cs",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\ViewModels\\EditStepVM.cs",
+              "RelativeToolTip": "ViewModels\\EditStepVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T02:47:44.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Lunch.cshtml",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Recipe\\Lunch.cshtml",
+              "RelativeDocumentMoniker": "Views\\Recipe\\Lunch.cshtml",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Recipe\\Lunch.cshtml",
+              "RelativeToolTip": "Views\\Recipe\\Lunch.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwCkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-23T01:32:06.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Breakfast.cshtml",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Recipe\\Breakfast.cshtml",
+              "RelativeDocumentMoniker": "Views\\Recipe\\Breakfast.cshtml",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Recipe\\Breakfast.cshtml",
+              "RelativeToolTip": "Views\\Recipe\\Breakfast.cshtml",
+              "ViewState": "AgIAAC4AAAAAAAAAAAArwD8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-23T01:32:59.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADIBAAAAAAAAAAAuwDkBAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-23T01:34:39.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Dinner.cshtml",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Recipe\\Dinner.cshtml",
+              "RelativeDocumentMoniker": "Views\\Recipe\\Dinner.cshtml",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Recipe\\Dinner.cshtml",
+              "RelativeToolTip": "Views\\Recipe\\Dinner.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-23T01:32:28.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Recipe\\Detail.cshtml",
+              "RelativeDocumentMoniker": "Views\\Recipe\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\katik\\source\\repos\\FlavoursomeWeb\\Views\\Recipe\\Detail.cshtml",
+              "RelativeToolTip": "Views\\Recipe\\Detail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-22T22:58:40.871Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

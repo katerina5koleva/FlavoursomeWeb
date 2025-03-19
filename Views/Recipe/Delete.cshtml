@@ -1,0 +1,192 @@
+﻿@using FlavoursomeWeb.Data.Enums
+@model Recipe
+@{
+    int totalTimeMinutes = Model.TimeMinutes;
+    int hours = totalTimeMinutes / 60;
+    int minutes = totalTimeMinutes % 60;
+}
+
+<h1>Are you sure you want to delete this recipe?</h1>
+
+<form asp-action="Delete" method="post">
+    @Html.AntiForgeryToken()
+
+    <!-- Hidden Id field for deletion -->
+    <input type="hidden" asp-for="ID" />
+
+    <div class="form-group">
+        <label class="section-title">Recipe Name & Type</label>
+        <div class="d-flex">
+            <input asp-for="Name" class="form-control" placeholder="Recipe Name" style="width: 50%;" readonly />
+            <select asp-for="RecipeType" class="form-control" style="width: 200px;" disabled>
+                <option value="">Select your recipe type</option>
+                @foreach (DishType dishType in Enum.GetValues(typeof(DishType)))
+                {
+                    <option value="@dishType">@dishType.ToString()</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="section-title">Cooking Time & Servings</label>
+        <div class="d-flex gap-3">
+            <input class="form-control" type="number" min="0" value="@hours" placeholder="Hours" style="width: 100px;" readonly />
+            <input class="form-control" type="number" min="0" max="59" value="@minutes" placeholder="Minutes" style="width: 100px;" readonly />
+            <input asp-for="Servings" class="form-control" type="number" min="1" value="@(Model?.Servings ?? 1)" placeholder="Servings" style="width: 230px;" readonly />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="section-title">Ingredients</label>
+        <div id="ingredientsContainer">
+            @for (int i = 0; i < Model.Ingredients.Count; i++)
+            {
+                <div class="ingredient-entry mb-3">
+                    <div class="col-md-4">
+                        <input asp-for="Ingredients[i].Name" class="form-control" placeholder="Ingredient Name" readonly />
+                    </div>
+                    <div class="col-md-3">
+                        <input asp-for="Ingredients[i].Quantity" class="form-control" placeholder="Quantity" readonly />
+                    </div>
+                    <div class="col-md-3">
+                        <select asp-for="Ingredients[i].QuantityType" class="form-control" disabled>
+                            <option value="">Select Quantity Type</option>
+                            @foreach (QuantityType quantityType in Enum.GetValues(typeof(QuantityType)))
+                            {
+                                <option value="@quantityType">@quantityType.ToString()</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="section-title">Instructions</label>
+        <div id="stepsContainer">
+            @for (int i = 0; i < Model.Steps.Count; i++)
+            {
+                <div class="step-entry">
+                    <label>Step @(i + 1)</label>
+                    <input asp-for="Steps[i].Description" class="form-control" placeholder="Describe your step" style="width: 100%; height: 100px;" readonly />
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="section-title">Recipe Image</label>
+        <input asp-for="Image" type="file" class="form-control" placeholder="Image" disabled />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Confirm" class="btn btn-danger float-right mt-3" />
+        <a asp-action="Index" asp-controller="Recipe" class="btn btn-secondary float-right mt-3">Cancel</a>
+    </div>
+</form>
+
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    /* Recipe Name and Recipe Type in one row */
+    .d-flex {
+        display: flex;
+        gap: 15px;
+    }
+
+        /* Adjusting spacing between input fields */
+        .d-flex input {
+            margin-right: 10px;
+        }
+
+        /* Cooking Time and Servings in one row */
+        .d-flex gap-3 {
+            gap: 20px;
+        }
+
+    .ingredient-entry {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: white;
+    }
+
+        .ingredient-entry input,
+        .ingredient-entry select {
+            flex: 1;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+    .step-entry {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: white;
+    }
+
+        .step-entry input {
+            width: 100%;
+            height: 100px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+    .btn-info {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .btn-info:hover {
+            background-color: #0056b3;
+        }
+
+    /* Green Submit button */
+    .btn-success {
+        background-color: #28a745;
+        color: white;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+</style>
+

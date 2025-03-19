@@ -1,0 +1,118 @@
+﻿@using FlavoursomeWeb.Helpers
+@using FlavoursomeWeb.ViewModels
+@model RecipeVM
+
+<div class="container">
+
+    <!-- Recipe Header Row -->
+    <div class="row align-items-center">
+        <!-- Recipe Image -->
+        <div class="col-md-5 position-relative">
+            <img class="img-fluid rounded" src="@Model.Recipe.Image" alt="Recipe Image" style="width: 100%; border-radius: 10px;">
+
+            <!-- Favorite Button in the Top-Right Corner -->
+            <button class="favorite-btn @(Model.IsFavorited ? "favorited" : "")"
+                    onclick="toggleFavorite(@Model.Recipe.ID, this)"
+                    style="position: absolute; top: 10px; right: 10px; background: none; border: none; cursor: pointer;">
+                <i class="fa-@(Model.IsFavorited ? "solid" : "regular") fa-heart" style="color: red; font-size: 24px;"></i>
+            </button>
+        </div>
+
+        <!-- Recipe Info -->
+        <div class="col-md-7">
+            <h1><strong><i>@Model.Recipe.Name</i></strong></h1>
+            <h3>Servings: @Model.Recipe.Servings</h3>
+            <h3>Cooking Time: @FormatCookingTime.FormatTime(Model.Recipe.TimeMinutes)</h3>
+            <h3>Type: <i>@Model.Recipe.RecipeType</i></h3>
+        </div>
+    </div>
+
+    <!-- Recipe Details Row -->
+    <div class="row mt-4">
+        <!-- Ingredients Section -->
+        <div class="col-md-6">
+            <h3 class="my-3">Ingredients</h3>
+            <ul>
+                @foreach (Ingredient ingredient in Model.Recipe.Ingredients)
+                {
+                    <li>
+                        <hr class="featurette-divider">
+                        @(ingredient.Quantity.HasValue ? ingredient.Quantity.ToString() : "")
+                        @PluralQuanitityTypes.GetPluralType(ingredient.Quantity, ingredient.QuantityType) 
+                        @ingredient.Name
+                        <hr class="featurette-divider">
+                    </li>
+                }
+            </ul>
+        </div>
+
+        <!-- Steps Section -->
+        <div class="col-md-6">
+            <h3 class="my-3">Instructions</h3>
+            <div class="steps-container">
+                @foreach (var (step, index) in Model.Recipe.Steps.OrderBy(s => s.ID).Select((s, i) => (s, i + 1)))
+                {
+                    <div class="step mb-4">
+                        <h5 class="fw-bold">
+                            Step @index
+                            <span class="step-divider"></span> <!-- Pretty line next to the number -->
+                        </h5>
+                        <p>@step.Description</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .favorite-btn {
+        transition: transform 0.2s ease-in-out;
+    }
+
+        .favorite-btn:hover i {
+            transform: scale(1.2);
+        }
+    .step-divider {
+        display: inline-block;
+        width: 40%; /* Slightly shorter line */
+        height: 2px;
+        background-color: #aaa; /* Slightly darker for better contrast */
+        margin-left: 15px; /* More breathing room */
+        vertical-align: middle;
+    }
+
+    .step {
+        border-left: 3px solid #007bff; /* Beautiful blue accent */
+        padding-left: 20px; /* More space so it's not too close to the line */
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+</style>
+<script>
+    function toggleFavorite(recipeId, button) {
+        fetch('/Recipe/Toggle', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({ recipeId: recipeId }) // Send the recipeId as JSON
+        })
+            .then(response => response.json())  // Parse the JSON response
+            .then(data => {
+                if (data.isFavorited) {
+                    button.classList.add("favorited");
+                    button.querySelector("i").classList.add("fa-solid");
+                    button.querySelector("i").classList.remove("fa-regular");
+                } else {
+                    button.classList.remove("favorited");
+                    button.querySelector("i").classList.remove("fa-solid");
+                    button.querySelector("i").classList.add("fa-regular");
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+</script>

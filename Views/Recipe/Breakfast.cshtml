@@ -1,0 +1,137 @@
+﻿@using FlavoursomeWeb.Helpers
+@using FlavoursomeWeb.ViewModels
+@model List<RecipeVM>
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="/images/breakfast.jpg" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" </img>
+
+            <div class="container">
+                <div class="carousel-caption text-start">
+                    <h1>Breakfast</h1>
+                    <p>Start Your Day The Delicious Way!</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/images/allRecipes.jpg" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" </img>
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>All Recipes</h1>
+                    <p>Find your next favorite.</p>
+                    <p><a asp-controller="Recipe" asp-action="Index" class="btn btn-lg btn-primary">Back To All Recipes</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/images/addYourOwn.jpg" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" </img>
+
+            <div class="container">
+                <div class="carousel-caption text-end">
+                    <h1>Or..</h1>
+                    <p>Become a star yourself.</p>
+                    <p><a asp-controller="Recipe" asp-action="Create" class="btn btn-lg btn-primary">Add Your Own</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<hr class="featurette-divider">
+
+<!-- Cards Section -->
+<div class="row">
+    @foreach (RecipeVM recipe in Model)
+    {
+        <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="@recipe.Recipe.Image" width="100%" height="225" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">
+                        @recipe.Recipe.Name
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a asp-controller="Recipe" asp-action="Detail" asp-route-id="@recipe.Recipe.ID" class="btn btn-sm btn-outline-secondary">View</a>
+                            @if (User.Identity.IsAuthenticated
+                           && User.FindFirst(System.Security.Claims
+                           .ClaimTypes.NameIdentifier).Value == recipe.Recipe.UserId
+                           || User.Identity.IsAuthenticated && User.IsInRole("Administrator"))
+                            {
+                                <a asp-controller="Recipe" asp-action="Edit" asp-route-id="@recipe.Recipe.ID" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                <a asp-controller="Recipe" asp-action="Delete" asp-route-id="@recipe.Recipe.ID" class="btn btn-sm btn-outline-secondary">Delete</a>
+                            }
+                        </div>
+                        <small class="text-muted">@recipe.Recipe.Servings servings || @FormatCookingTime.FormatTime(recipe.Recipe.TimeMinutes)</small>
+                    </div>
+                </div>
+                <button class="favorite-btn @(recipe.IsFavorited ? "favorited" : "")"
+                        onclick="toggleFavorite(@recipe.Recipe.ID, this)">
+                    <i class="fa-@(recipe.IsFavorited ? "solid" : "regular") fa-heart"></i>
+                </button>
+            </div>
+        </div>
+    }
+</div>
+<style>
+    .favorite-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+        .favorite-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .favorite-btn.favorited i {
+            color: red;
+            font-weight: bold;
+        }
+</style>
+<script>
+    function toggleFavorite(recipeId, button) {
+        fetch('/Recipe/Toggle', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({ recipeId: recipeId }) // Send the recipeId as JSON
+        })
+            .then(response => response.json())  // Parse the JSON response
+            .then(data => {
+                if (data.isFavorited) {
+                    button.classList.add("favorited");
+                    button.querySelector("i").classList.add("fa-solid");
+                    button.querySelector("i").classList.remove("fa-regular");
+                } else {
+                    button.classList.remove("favorited");
+                    button.querySelector("i").classList.remove("fa-solid");
+                    button.querySelector("i").classList.add("fa-regular");
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+</script>

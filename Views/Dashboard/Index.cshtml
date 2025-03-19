@@ -1,0 +1,130 @@
+﻿@using FlavoursomeWeb.Helpers
+@using FlavoursomeWeb.ViewModels
+@model DashboardVM
+<div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="/images/flavoursome.jpg"
+             class="bd-placeholder-img"
+             width="100%" height="100%"
+             aria-hidden="true">
+        <div class="container">
+            <div class="carousel-caption">
+                <h1>Personal Dashboard</h1>
+                <p>The place keeping all your recipes safe and sound.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+    <div class="col-md-7">
+        <h2 class="featurette-heading">Favorite recipes <a asp-controller="Recipe" asp-action="Index" class="btn btn-lg btn-primary">View Recipes</a></h2>
+    </div>
+    <div class="row">
+        @foreach (RecipeVM favorite in Model.FavoriteUserRecipes)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="@favorite.Recipe.Image" width="100%" height="225" alt="@favorite.Recipe.Name">
+                    <div class="card-body">
+                        <p class="card-text">@favorite.Recipe.Name</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a asp-controller="Recipe" asp-action="Detail" asp-route-id="@favorite.Recipe.ID" class="btn btn-sm btn-outline-secondary">View</a>
+                            </div>
+                            <small class="text-muted">@favorite.Recipe.Servings servings || @FormatCookingTime.FormatTime(favorite.Recipe.TimeMinutes)</small>
+                        </div>
+                    </div>
+                    <button class="favorite-btn @(favorite.IsFavorited ? "favorited" : "")"
+                            onclick="toggleFavorite(@favorite.Recipe.ID, this)">
+                        <i class="fa-@(favorite.IsFavorited ? "solid" : "regular") fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        }
+    </div> <!-- End Row -->
+</div> <!-- End Container -->
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+    <div class="col-md-7">
+        <h2 class="featurette-heading">Your recipes <a asp-controller="Recipe" asp-action="Create" class="btn btn-lg btn-primary">Add a recipe</a></h2>
+    </div>
+    <div class="row">
+        @foreach (Recipe recipe in Model.UserRecipes)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="@recipe.Image" width="100%" height="225" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">
+                            @recipe.Name
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a asp-controller="Recipe" asp-action="Detail" asp-route-id="@recipe.ID" class="btn btn-sm btn-outline-secondary">View</a>
+                                <a asp-controller="Recipe" asp-action="Edit" asp-route-id="@recipe.ID" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                <a asp-controller="Recipe" asp-action="Delete" asp-route-id="@recipe.ID" class="btn btn-sm btn-outline-secondary">Delete</a>
+                            </div>
+                            <small class="text-muted">@recipe.Servings servings || @FormatCookingTime.FormatTime(recipe.TimeMinutes)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div> <!-- End Row -->
+</div> <!-- End Container -->
+
+<style>
+    .favorite-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+        .favorite-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .favorite-btn.favorited i {
+            color: red;
+            font-weight: bold;
+        }
+</style>
+<script>
+    function toggleFavorite(recipeId, button) {
+        fetch('/Recipe/Toggle', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({ recipeId: recipeId }) // Send the recipeId as JSON
+        })
+            .then(response => response.json())  // Parse the JSON response
+            .then(data => {
+                if (data.isFavorited) {
+                    button.classList.add("favorited");
+                    button.querySelector("i").classList.add("fa-solid");
+                    button.querySelector("i").classList.remove("fa-regular");
+                } else {
+                    button.classList.remove("favorited");
+                    button.querySelector("i").classList.remove("fa-solid");
+                    button.querySelector("i").classList.add("fa-regular");
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+</script>
+

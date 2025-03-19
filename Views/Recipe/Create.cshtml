@@ -1,0 +1,251 @@
+﻿@using FlavoursomeWeb.Data.Enums
+@using FlavoursomeWeb.ViewModels
+@model CreateRecipeVM
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="UserID" />
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label asp-for="Name" class="section-title">Recipe Name & Type</label>
+        <div class="d-flex">
+            <input asp-for="Name" class="form-control" placeholder="Enter your recipe name" style="width: 50%;">
+            <select asp-for="RecipeType" class="form-control" style="width: 200px;">
+                <option value="">Select your recipe type</option>
+                @foreach (DishType dishType in Enum.GetValues(typeof(DishType)))
+                {
+                    <option value="@dishType">@dishType.ToString()</option>
+                }
+            </select>
+        </div>
+        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label class="section-title">Cooking Time & Servings</label>
+        <div class="d-flex gap-3">
+            <input asp-for="CookingTimeHours" class="form-control" type="number" min="0" value="@(Model?.CookingTimeHours ?? 0)" placeholder="Hours" style="width: 100px;">
+            @Html.ValidationMessageFor(model => model.CookingTimeHours, "", new { @class = "text-danger" })
+            <span asp-validation-for="CookingTimeHours" class="text-danger"></span>
+            <input asp-for="CookingTimeMinutes" class="form-control" type="number" type="number" min="0" max="59" value="@(Model?.CookingTimeMinutes ?? 0)" placeholder="Minutes" style="width: 100px;">
+            @Html.ValidationMessageFor(model => model.CookingTimeMinutes, "", new { @class = "text-danger" })
+            <span asp-validation-for="CookingTimeMinutes" class="text-danger"></span>
+            <input asp-for="Servings" class="form-control" type="number" min="1" value="@(Model?.Servings ?? 1)" placeholder="Enter your recipe servings" style="width: 230px;">
+            @Html.ValidationMessageFor(model => model.Servings, "", new { @class = "text-danger" })
+            <span asp-validation-for="Servings" class="text-danger"></span>
+        </div>
+        @Html.ValidationMessageFor(model => model.TimeMinutes, "", new { @class = "text-danger" })
+        <span asp-validation-for="TimeMinutes" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label class="section-title">Ingredients</label>
+        <div id="ingredientsContainer">
+            @for (int i = 0; i < Model.VMIngredients.Count; i++)
+            {
+                <div class="row ingredient-entry mb-3">
+                    <div class="col-md-4">
+                        <input asp-for="VMIngredients[i].Name" class="form-control" placeholder="Ingredient Name" />
+                        @Html.ValidationMessageFor(model => model.VMIngredients[i].Name, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-3">
+                        <input asp-for="VMIngredients[i].Quantity" class="form-control" placeholder="Quantity" />
+                        @Html.ValidationMessageFor(model => model.VMIngredients[i].Quantity, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-3">
+                        <select asp-for="VMIngredients[i].QuantityType" class="form-control">
+                            <option value="">Select Quantity Type</option>
+                            @foreach (QuantityType quantityType in Enum.GetValues(typeof(QuantityType)))
+                            {
+                                <option value="@quantityType">@quantityType.ToString()</option>
+                            }
+                        </select>
+                        @Html.ValidationMessageFor(model => model.VMIngredients[i].QuantityType, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            }
+        </div>
+        <button type="button" class="btn btn-info" id="addIngredientBtn">Add Another Ingredient</button>
+    </div>
+
+    <div class="form-group">
+        <label class="section-title">Instructions</label>
+        <div id="stepsContainer">
+            @for (int i = 0; i < Model.VMSteps.Count; i++)
+            {
+                <div class="step-entry">
+                    <label>Step @(i + 1)</label>
+                    <input asp-for="VMSteps[i].Description" class="form-control" placeholder="Describe your step" style="width: 100%; height: 100px;" />
+                    @Html.ValidationMessageFor(model => model.VMSteps[i].Description, "", new { @class = "text-danger" })
+                </div>
+            }
+        </div>
+        <button type="button" class="btn btn-info" id="addStepBtn">Add Another Step</button>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Image" class="section-title">Recipe Image</label>
+        <input asp-for="Image" type="file" class="form-control" placeholder="Image">
+        @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
+        <span asp-validation-for="Image" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    /* Recipe Name and Recipe Type in one row */
+    .d-flex {
+        display: flex;
+        gap: 15px;
+    }
+
+        /* Adjusting spacing between input fields */
+        .d-flex input {
+            margin-right: 10px;
+        }
+
+        /* Cooking Time and Servings in one row */
+        .d-flex gap-3 {
+            gap: 20px;
+        }
+
+    .ingredient-entry {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: white;
+    }
+
+        .ingredient-entry input,
+        .ingredient-entry select {
+            flex: 1;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+    .step-entry {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: white;
+    }
+
+        .step-entry input {
+            width: 100%;
+            height: 100px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+    .btn-info {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .btn-info:hover {
+            background-color: #0056b3;
+        }
+
+    /* Green Submit button */
+    .btn-success {
+        background-color: #28a745;
+        color: white;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+</style>
+
+
+<script>
+    let ingredientIndex = @Model.VMIngredients.Count();
+
+    document.getElementById('addIngredientBtn').addEventListener('click', function () {
+        let newIngredient = document.createElement('div');
+        newIngredient.classList.add('row', 'ingredient-entry', 'mb-3');
+
+        newIngredient.innerHTML = `
+                <div class="col-md-4">
+                    <input type="text" name="VMIngredients[${ingredientIndex}].Name" class="form-control" placeholder="Ingredient Name">
+                </div>
+                <div class="col-md-3">
+                    <input type="number" name="VMIngredients[${ingredientIndex}].Quantity" class="form-control" placeholder="Quantity">
+                </div>
+                <div class="col-md-3">
+                    <select name="VMIngredients[${ingredientIndex}].QuantityType" class="form-control">
+                        <option value="">Select Quantity Type</option>
+                        ${generateQuantityOptions()}
+                    </select>
+                </div>
+            `;
+
+        document.getElementById('ingredientsContainer').appendChild(newIngredient);
+        ingredientIndex++;
+    });
+
+    function generateQuantityOptions() {
+        let options = "";
+    @foreach (QuantityType quantityType in Enum.GetValues(typeof(QuantityType)))
+    {
+        @:options += `<option value="@quantityType">@quantityType.ToString()</option>`;
+    }
+            return options;
+    }
+
+    let stepIndex = @Model.VMSteps.Count();;
+
+    document.getElementById('addStepBtn').addEventListener('click', function () {
+        let newStep = document.createElement('div');
+        newStep.classList.add('step-entry');
+
+        newStep.innerHTML = `
+                <label>Step ${stepIndex + 1}</label>
+                <input type="text" name="VMSteps[${stepIndex}].Description" class="form-control" placeholder="Describe your step">
+            `;
+
+        document.getElementById('stepsContainer').appendChild(newStep);
+        stepIndex++;
+    });
+</script>
+
+
+
+
+
